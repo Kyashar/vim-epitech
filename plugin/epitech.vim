@@ -29,20 +29,7 @@ endfunction
 command! EpiCleaner call EpitechCleaner()
 
 " FIXME document commands
-command! EpiNormeCheck call epitech#norme#Check()
 command! EpiHeader call epitech#header#Put()
-
-augroup epitech
-    autocmd!
-
-    if g:header_update == 1
-      autocmd FileWritePre,BufWritePre * call epitech#header#Update()
-    endif
-    if g:header_auto == 1
-        autocmd BufNewFile * call epitech#header#Put()
-    endif
-augroup END
-
 
 nmap <Leader>n :<C-U>EpiNormeCheck<CR>
 nmap <Leader>h :<C-U>EpiHeader<CR>
