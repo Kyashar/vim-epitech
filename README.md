@@ -2,7 +2,6 @@ vim-epitech
 ===========
 
 An all-in-one configuration to ease (n)vim usage at Epitech.
-I allowed myself to fork it, the original project is not anymore up to date.
 
 ## Installation
 
