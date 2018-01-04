@@ -2,13 +2,14 @@ vim-epitech
 ===========
 
 An all-in-one configuration to ease (n)vim usage at Epitech.
+# I allowed myself to fork it, the original project is not anymore up to date.
 
 ## Installation
 
 If you use https://github.com/junegunn/vim-plug
 add the line
 ```
-Plug 'LeBarbu/vim-epitech'
+Plug 'Kyashar/vim-epitech'
 ```
 to your .vimrc
 

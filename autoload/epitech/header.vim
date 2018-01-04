@@ -53,17 +53,3 @@ function! epitech#header#Put()
 	call s:InsertFirst()
 	:6
 endfunction
-
-function! epitech#header#Update()
-	if !s:IsSupportedFt()
-		return
-	endif
-
-	if epitech#header#IsPresent() > 0
-		let save_cursor = getpos(".")
-		1,10s/\(.*\) Last update .*/\1 Last update µLASTUPDATEµ µLOGINLASTµ/ge
-		1,10s/µLOGINLASTµ/\= g:epi_name/ge
-		1,10s/µLASTUPDATEµ/\= s:Epistrtime()/ge
-		call setpos('.', save_cursor)
-	endif
-endfunction
