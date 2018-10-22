@@ -6,8 +6,8 @@ let s:comMap = {
 
 function! s:Epistrtime()
 	let old_time = v:lc_time
-	language time en_US
-	let str = strftime("%Y")
+	language time en_US.UTF-8
+	let str = strftime("%d/%m/%Y")
 	exec 'language time '.old_time
 	return str
 endfunction
@@ -15,9 +15,11 @@ endfunction
 function! s:InsertFirst()
 	call inputsave()
 	let proj_name = input('Enter project name: ')
+	let login = input('Enter project login: ')
 	call inputrestore()
 	1,6s/µCREATDAYµ/\= s:Epistrtime()/ge
 	1,6s/µPROJECTNAMEµ/\= proj_name/ge
+	1,6s/µLOGINµ/\= login/ge
 endfunction
 
 function! s:IsSupportedFt()
@@ -44,7 +46,7 @@ function! epitech#header#Put()
 	let l:ecom = s:comMap[&filetype]['e']
 
 	let l:ret = append(0, l:bcom)
-	let l:ret = append(1, l:mcom . " ETNA PROJECT, µCREATDAYµ")
+	let l:ret = append(1, l:mcom . " ETNA PROJECT, µCREATDAYµ by µLOGINµ")
 	let l:ret = append(2, l:mcom . " µPROJECTNAMEµ")
 	let l:ret = append(3, l:mcom . " File description:")
 	let l:ret = append(4, l:mcom . " description")
