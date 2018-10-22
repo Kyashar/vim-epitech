@@ -44,7 +44,7 @@ function! epitech#header#Put()
 	let l:ecom = s:comMap[&filetype]['e']
 
 	let l:ret = append(0, l:bcom)
-	let l:ret = append(1, l:mcom . " EPITECH PROJECT, µCREATDAYµ")
+	let l:ret = append(1, l:mcom . " ETNA PROJECT, µCREATDAYµ")
 	let l:ret = append(2, l:mcom . " µPROJECTNAMEµ")
 	let l:ret = append(3, l:mcom . " File description:")
 	let l:ret = append(4, l:mcom . " description")
